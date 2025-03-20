@@ -1,0 +1,18 @@
+<!-- store/templates/store/signup.html -->
+<h2>İstifadəçi Qeydiyyatı</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Qeydiyyatdan keç</button>
+</form>
+
+<!-- store/templates/store/login.html -->
+<h2>İstifadəçi Daxil Olma</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="username">İstifadəçi adı:</label>
+    <input type="text" name="username" id="username">
+    <label for="password">Şifrə:</label>
+    <input type="password" name="password" id="password">
+    <button type="submit">Daxil ol</button>
+</form>
